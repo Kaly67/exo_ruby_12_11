@@ -1,0 +1,13 @@
+puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ? "
+etage = gets.chomp.to_i
+if etage > 25
+  puts "Votre nombre est trop grand !"
+else
+  1.upto(etage) do |k|
+    # Afficher des espaces pour aligner la pyramide à gauche
+    print " " * (etage - k)
+    # Afficher les caractères "#" pour chaque étage
+    print "#" * k
+    puts
+  end
+end
